@@ -102,8 +102,96 @@ namespace BackEndCapstone.Data
             user.PasswordHash = passwordHash4.HashPassword(user4, "Admin8*");
             modelBuilder.Entity<ApplicationUser>().HasData(user4);
 
+            ApplicationUser user5 = new ApplicationUser
+            {
+
+                FirstName = "Lauren",
+                LastName = "Maxwell",
+                UserName = "lauren@lauren.com",
+                NormalizedUserName = "LAUREN@LAUREN.COM",
+                Email = "lauren@lauren.com",
+                NormalizedEmail = "LAUREN@LAUREN.COM",
+                EmailConfirmed = true,
+                LockoutEnabled = false,
+                SecurityStamp = "7f434309-a4d9-48e9-9ebb-8803db794577",
+                Id = "00010000-ffff-ffff-ffff-ffffffffffff"
+            };
+            var passwordHash5 = new PasswordHasher<ApplicationUser>();
+            user.PasswordHash = passwordHash5.HashPassword(user5, "Admin8*");
+            modelBuilder.Entity<ApplicationUser>().HasData(user5);
 
 
+            ApplicationUser user6 = new ApplicationUser
+            {
+
+                FirstName = "Dylan",
+                LastName = "Griffin",
+                UserName = "dylan@dylan.com",
+                NormalizedUserName = "DYLAN@DYLAN.COM",
+                Email = "dylan@dylan.com",
+                NormalizedEmail = "DYLAN@DYLAN.COM",
+                EmailConfirmed = true,
+                LockoutEnabled = false,
+                SecurityStamp = "7f434309-a4d9-48e9-9ebb-8803db794577",
+                Id = "00001000-ffff-ffff-ffff-ffffffffffff"
+            };
+            var passwordHash6 = new PasswordHasher<ApplicationUser>();
+            user.PasswordHash = passwordHash6.HashPassword(user6, "Admin8*");
+            modelBuilder.Entity<ApplicationUser>().HasData(user6);
+
+            ApplicationUser user7 = new ApplicationUser
+            {
+
+                FirstName = "madi",
+                LastName = "peper",
+                UserName = "madi@madi.com",
+                NormalizedUserName = "MADI@MADI.COM",
+                Email = "madi@madi.com",
+                NormalizedEmail = "MADI@MADI.COM",
+                EmailConfirmed = true,
+                LockoutEnabled = false,
+                SecurityStamp = "7f434309-a4d9-48e9-9ebb-8803db794577",
+                Id = "000001000-ffff-ffff-ffff-ffffffffffff"
+            };
+            var passwordHash7 = new PasswordHasher<ApplicationUser>();
+            user.PasswordHash = passwordHash7.HashPassword(user7, "Admin8*");
+            modelBuilder.Entity<ApplicationUser>().HasData(user7);
+
+            ApplicationUser user8 = new ApplicationUser
+            {
+
+                FirstName = "mo",
+                LastName = "silvera",
+                UserName = "mo@mo.com",
+                NormalizedUserName = "MO@MO.COM",
+                Email = "mo@mo.com",
+                NormalizedEmail = "MO@MO.COM",
+                EmailConfirmed = true,
+                LockoutEnabled = false,
+                SecurityStamp = "7f434309-a4d9-48e9-9ebb-8803db794577",
+                Id = "000000010-ffff-ffff-ffff-ffffffffffff"
+            };
+            var passwordHash8 = new PasswordHasher<ApplicationUser>();
+            user.PasswordHash = passwordHash8.HashPassword(user8, "Admin8*");
+            modelBuilder.Entity<ApplicationUser>().HasData(user8);
+
+            ApplicationUser user9 = new ApplicationUser
+            {
+
+                FirstName = "taylor",
+                LastName = "caroll",
+                UserName = "taylor@taylor.com",
+                NormalizedUserName = "TAYLOR@TAYLOR.COM",
+                Email = "taylor@taylor.com",
+                NormalizedEmail = "TAYLOR@TAYLOR.COM",
+                EmailConfirmed = true,
+                LockoutEnabled = false,
+                SecurityStamp = "7f434309-a4d9-48e9-9ebb-8803db794577",
+                Id = "000000001-ffff-ffff-ffff-ffffffffffff"
+            };
+            var passwordHash9 = new PasswordHasher<ApplicationUser>();
+            user.PasswordHash = passwordHash9.HashPassword(user9, "Admin8*");
+            modelBuilder.Entity<ApplicationUser>().HasData(user9);
 
             Gemstone Amazonite = new Gemstone()
             {
@@ -243,6 +331,14 @@ namespace BackEndCapstone.Data
             };
             modelBuilder.Entity<Gemstone>().HasData(AquaQuartz);
 
+            Gemstone Wood = new Gemstone()
+            {
+                Id = 16,
+                Title = "Wood",
+                ImagePath = "Wood.jpg",
+                Description = "Wood is generally easy to find and work with so wherever wood is found you will find wooden beads. Regional carpenters and carvers use the most readily available species of wood and beadmaking itself was used as exercises for apprentices or as spare time work for journeymen or masters. This wide variety of woodworkers and woods makes for an astonishing variety of forms, sizes, and types of wood beads.Many species of treesprovide material for wood beads. These include olive, sandalwood,bamboo, bayong, ebony, ironwood, palm, apple, pear, and rose, to namebut a few. All of these types of wood have been used for beads eitherbecause the grain of the wood is beautiful or because the wood isaromatic."
+            };
+            modelBuilder.Entity<Gemstone>().HasData(Wood);
 
 
 
@@ -274,7 +370,9 @@ namespace BackEndCapstone.Data
             {
                 Id = 1,
                 Title = "Calcite Triangle Earrings",
-                GemstoneId = 2, 
+                UserId = 1,
+                DateAdded = DateTime.Now,
+                GemstoneId = 2,
                 ImagePath = "TriangleCalciteEarrings.jpg",
                 ProductTypeId = 1,
                 Description = "Rustic triangle shaped copper earrings with large, round calcite gemstone.",
@@ -287,9 +385,11 @@ namespace BackEndCapstone.Data
 
             Product BlackOnyxEarrings = new Product()
             {
+                UserId = 1,
                 Id = 2,
                 Title = "Black Onyx Dangle Earrings",
                 ImagePath = "BlackOnyxDangle.jpg",
+                DateAdded = DateTime.Now,
                 GemstoneId = 5,
                 ProductTypeId = 1,
                 Description = "Elegant sterling silver and black onyx dangle earrings.",
@@ -303,11 +403,12 @@ namespace BackEndCapstone.Data
             Product PinkBlueTassleEarrings = new Product()
             {
                 Id = 3,
-            
+                UserId = 1,
                 GemstoneId = 13,
                 ProductTypeId = 1,
                 Title = "Pink and Blue Jasper Tassle Earrings",
                 ImagePath = "blueJasperTassle.jpg",
+                DateAdded = DateTime.Now,
                 Description = "Trendy tassle earrings with all natural pink and coral jasper gemstones.",
 
 
@@ -319,14 +420,13 @@ namespace BackEndCapstone.Data
             Product LepidoliteHoops = new Product()
             {
                 Id = 4,
-
+                UserId = 1,
                 GemstoneId = 9,
                 ProductTypeId = 1,
                 Title = "Lepidolite Gold Hoops",
+                DateAdded = DateTime.Now,
                 ImagePath = "LepidoliteChipHoops.jpg",
                 Description = "Hammered out gold hoop earrings with wire-wrapped lepidolite chips.",
-
-
             };
             modelBuilder.Entity<Product>().HasData(LepidoliteHoops);
 
@@ -336,13 +436,13 @@ namespace BackEndCapstone.Data
             {
                 Id = 5,
                 GemstoneId = 4,
+                UserId = 1,
                 ProductTypeId = 1,
                 Title = "Gold Hoop Earrings With Petrified Coral",
                 ImagePath = "coralHoops.jpg",
+                DateAdded = DateTime.Now,
                 Description = "Hammered out gold hoops with wire wrapped pieces of petrified coral.",
-
-
-            };
+};
             modelBuilder.Entity<Product>().HasData(CoralHoops);
 
 
@@ -350,9 +450,11 @@ namespace BackEndCapstone.Data
             Product HammeredGoldAndChainEarrings = new Product()
             {
                 Id = 6,
+                UserId = 1,
                 ProductTypeId = 1,
                 Title = "Gold and Bronze Chain Earrings",
                 ImagePath = "GoldBronzeChainEarrings.jpg",
+                DateAdded = DateTime.Now,
                 Description = "Hammered out gold earrings with bronze chain.",
 
 
@@ -364,13 +466,13 @@ namespace BackEndCapstone.Data
             Product BlackTassleEarrings = new Product()
             {
                 Id = 7,
+                UserId = 1,
                 ProductTypeId = 1,
                 Title = "Teardrop Black Tassle Earrings",
                 ImagePath = "GoldTeardropBlackTassle.jpg",
+                DateAdded = DateTime.Now,
                 Description = "Teardrop shaped gold earrings with black tassles.",
-
-
-            };
+  };
             modelBuilder.Entity<Product>().HasData(BlackTassleEarrings);
 
 
@@ -379,13 +481,13 @@ namespace BackEndCapstone.Data
             {
                 Id = 8,
                 GemstoneId = 7,
+                UserId = 1,
                 ProductTypeId = 1,
                 Title = "Diamond Shaped Hoops with Larimar Gemstones",
                 ImagePath = "DiamondLarimarEarrings.jpg",
+                DateAdded = DateTime.Now,
                 Description = "Hammered out diamond shaped gold hoops with wire wrapped larimar gemstones.",
-
-
-            };
+     };
             modelBuilder.Entity<Product>().HasData(DiamondLarimarEarrings);
 
 
@@ -394,9 +496,11 @@ namespace BackEndCapstone.Data
             {
                 Id = 9,
                 GemstoneId = 1,
+                UserId = 1,
                 ProductTypeId = 1,
                 Title = "Sterling Silver and Amazonite Earrings",
                 ImagePath = "SterlingAmazoniteEarrings.jpg",
+                DateAdded = DateTime.Now,
                 Description = "Asymmetrical sterling silver bead frames with rare cut amazonite gemstones."
 
             };
@@ -407,14 +511,14 @@ namespace BackEndCapstone.Data
             Product PinkOpalCopperHoops = new Product()
             {
                 Id = 10,
+                UserId = 1,
                 GemstoneId = 11,
                 ProductTypeId = 1,
                 Title = "Copper Hoops with Pink Opal",
                 ImagePath = "BronzePinkOpalHoops.jpg",
+                DateAdded = DateTime.Now,
                 Description = "Hammered out copper hoop earrings with wire wrapped pink opal gemstones."
-
-
-            };
+ };
             modelBuilder.Entity<Product>().HasData(PinkOpalCopperHoops);
 
 
@@ -422,20 +526,25 @@ namespace BackEndCapstone.Data
             {
                 Id = 11,
                 GemstoneId = 12,
+                UserId = 1,
                 ProductTypeId = 1,
                 Title = "Framed Autumn Jasper Earrings",
                 ImagePath = "AutumnJasperFramed.jpg",
+                DateAdded = DateTime.Now,
                 Description = "Rare cut autumn jasper gemstones set inside sterling silver bead frame."
             };
             modelBuilder.Entity<Product>().HasData(FramedAutumnJasperEarrings);
+
 
             Product BlueLaceGoldHoops = new Product()
             {
                 Id = 12,
                 GemstoneId = 3,
+                UserId = 1,
                 ProductTypeId = 1,
                 Title = "Gold Hoops with Blue Lace Agate",
                 ImagePath = "BlueLaceHoops.jpg",
+                DateAdded = DateTime.Now,
                 Description = "Hammered out gold hoop earrings wire wrapped with chips of blue lace agate."
             };
             modelBuilder.Entity<Product>().HasData(BlueLaceGoldHoops);
@@ -445,9 +554,11 @@ namespace BackEndCapstone.Data
             {
                 Id = 13,
                 GemstoneId = 9,
+                UserId = 1,
                 ProductTypeId = 1,
                 Title = "Inverted Teardop Lepidolite Earrings",
                 ImagePath = "InvertedTeardropLarimar.jpg",
+                DateAdded = DateTime.Now,
                 Description = "Inverted gold teardrop earrings with wire wrapped lepidolite gemstones."
             };
             modelBuilder.Entity<Product>().HasData(InvertedTeardropLepidolite);
@@ -458,8 +569,10 @@ namespace BackEndCapstone.Data
                 Id = 14,
                 GemstoneId = 6,
                 ProductTypeId = 1,
+                UserId = 1,
                 Title = "Gold Hoop Lapis Earrings",
                 ImagePath = "LapisHoopEarrings.jpg",
+                DateAdded = DateTime.Now,
                 Description = "Gold hoop earrings accented with wire wrapped, teardrop shaped lapis gemstone."
             };
             modelBuilder.Entity<Product>().HasData(LapisHoops);
@@ -470,8 +583,10 @@ namespace BackEndCapstone.Data
                 Id = 15,
                 GemstoneId = 10,
                 ProductTypeId = 1,
+                UserId = 1,
                 Title = "Gold Teardrop Earrings with Rose Quartz",
                 ImagePath = "RoseGoldTeardrop.jpg",
+                DateAdded = DateTime.Now,
                 Description = "Hammered out gold teardrop earrings with wire wrapped chips of rose quartz."
             };
             modelBuilder.Entity<Product>().HasData(RoseQuartzTeardrops);
@@ -481,11 +596,406 @@ namespace BackEndCapstone.Data
                 Id = 16,
                 GemstoneId = 15,
                 ProductTypeId = 1,
+                UserId = 1,
                 Title = "Gold Hoop earrings with Aqua Quartz Gemstone",
                 ImagePath = "AquaQuartzGoldHoops.jpg",
+                DateAdded = DateTime.Now,
                 Description = "Hammered out gold hoop earrings with rare cut aqua quartz gemstones."
             };
             modelBuilder.Entity<Product>().HasData(AquaQuartzHoops);
+
+            Product SunstoneDangleEarrings = new Product()
+            {
+                Id = 17,
+                GemstoneId = 8,
+                ProductTypeId = 1,
+                UserId = 1,
+                Title = "Antique Copper Earrings With Sunstone",
+                ImagePath = "sunstoneEarrings.jpg",
+                DateAdded = DateTime.Now,
+                Description = "Beautiful antique copper earrings with shimmering sunstones."
+            };
+            modelBuilder.Entity<Product>().HasData(SunstoneDangleEarrings);
+
+            Product AutumnJasperEarrings2 = new Product()
+            {
+                Id = 18,
+                GemstoneId = 12,
+                ProductTypeId = 1,
+                UserId = 1,
+                Title = "Bronze and Autumn Jasper Dangle Earrings ",
+                ImagePath = "BronzeAndAutumnJasper.jpg",
+                DateAdded = DateTime.Now,
+                Description = "Bronze dangle earrings with unique cut autumn jasper gemstones."
+            };
+            modelBuilder.Entity<Product>().HasData(AutumnJasperEarrings2);
+
+            Product ThreadPEarlEarrings = new Product()
+            {
+                Id = 19,
+                GemstoneId = 14,
+                ProductTypeId = 1,
+                UserId = 1,
+                Title = "Threaded Pearl Earrings",
+                ImagePath = "PearlThreadEarrings.jpg",
+                DateAdded = DateTime.Now,
+                Description = "Beautifully elegant sterling silver thread earrings with freshwater pearls."
+            };
+            modelBuilder.Entity<Product>().HasData(ThreadPEarlEarrings);
+
+            Product HammeredGoldPearlEarrings = new Product()
+            {
+                Id = 20,
+                GemstoneId = 14,
+                ProductTypeId = 1,
+                UserId = 1,
+                Title = "Gold Earrings with Wire Wrapped Pearls",
+                ImagePath = "HammeredGoldPearl.jpg",
+                DateAdded = DateTime.Now,
+                Description = "Hammered out gold earrings with wire wrapped freswater pearls."
+            };
+            modelBuilder.Entity<Product>().HasData(HammeredGoldPearlEarrings);
+
+            Product PinkGreyJasperEarrings = new Product()
+            {
+                Id = 21,
+                GemstoneId = 13,
+                ProductTypeId = 1,
+                UserId = 1,
+                Title = "Pink and Grey Jasper Earrings",
+                ImagePath = "PinkGreyJasperEarrings.jpg",
+                DateAdded = DateTime.Now,
+                Description = "Bronze hoop earrings with pink and grey jasper gemstones."
+            };
+            modelBuilder.Entity<Product>().HasData(PinkGreyJasperEarrings);
+
+            Product PearlNecklace = new Product()
+            {
+                Id = 22,
+                GemstoneId = 14,
+                ProductTypeId = 2,
+                UserId = 1,
+                Title = "Delicate Freshwater Pearl Necklace",
+                ImagePath = "pearlNecklace.jpg",
+                DateAdded = DateTime.Now,
+                Description = "Delicate pink freshwater pearl necklace on gold chain."
+            };
+            modelBuilder.Entity<Product>().HasData(PearlNecklace);
+
+            Product ThreadPearlNecklace = new Product()
+            {
+                Id = 23,
+                GemstoneId = 14,
+                ProductTypeId = 2,
+                UserId = 1,
+                Title = "Threaded Pearl Necklace",
+                ImagePath = "ThreadPearlNecklace.jpg",
+                DateAdded = DateTime.Now,
+                Description = "Beautiful threaded freshwater pearl necklace with aqua quartz and purple crystals."
+            };
+            modelBuilder.Entity<Product>().HasData(ThreadPearlNecklace);
+
+
+            Product JasperBracelet = new Product()
+            {
+                Id = 24,
+                GemstoneId = 13,
+                ProductTypeId = 3,
+                UserId = 1,
+                Title = "Jasper and Glass Bracelet",
+                ImagePath = "JasperBracelet.jpg",
+                DateAdded = DateTime.Now,
+                Description = "Fun earth toned bracelet made with glass beads and jasper gemstones."
+            };
+            modelBuilder.Entity<Product>().HasData(JasperBracelet);
+
+
+            Product LightWoodBracelet = new Product()
+            {
+                Id = 25,
+                GemstoneId = 16,
+                ProductTypeId = 3,
+                UserId = 1,
+                Title = "Light Wood Bracelet",
+                ImagePath = "LightWoodBracelet.jpg",
+                DateAdded = DateTime.Now,
+                Description = "Bracelet made with wooden beads and stretchy floss cord."
+            };
+            modelBuilder.Entity<Product>().HasData(LightWoodBracelet);
+
+
+            Product DarkWoodBracelet = new Product()
+            {
+                Id = 26,
+                GemstoneId = 16,
+                ProductTypeId = 3,
+                UserId = 1,
+                Title = "Dark Wood Bracelet",
+                ImagePath = "DarkWoodBracelet.jpg",
+                DateAdded = DateTime.Now,
+                Description = "Bracelet made with wooden beads and stretchy floss cord."
+            };
+            modelBuilder.Entity<Product>().HasData(DarkWoodBracelet);
+
+
+
+
+
+
+
+
+
+
+
+            ProductReview JasperTassleReview = new ProductReview()
+            {
+                Id = 1,
+                UserId = 3,
+                ProductId = 3,
+                Comment = "These are so pretty! love the color!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(JasperTassleReview);
+
+            ProductReview RoseQuartzTeardropsReview = new ProductReview()
+            {
+                Id = 2,
+                UserId = 3,
+                ProductId = 15,
+                Comment = "Love these gemstones and the shape of the hoops",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(RoseQuartzTeardropsReview);
+
+            ProductReview LapisHoopsReview = new ProductReview()
+            {
+                Id = 3,
+                UserId = 4,
+                ProductId = 14,
+                Comment = "Lapis gems are my favorite. Nice wire wrapping!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(LapisHoopsReview);
+
+            ProductReview InvertedTeardropLepidoliteReview = new ProductReview()
+            {
+                Id = 4,
+                UserId = 4,
+                ProductId = 13,
+                Comment = "These purple gems are so cool. such a pretty design!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(InvertedTeardropLepidoliteReview);
+
+            ProductReview AquaQuartzHoopsReview = new ProductReview()
+            {
+                Id = 5,
+                UserId = 3,
+                ProductId = 16,
+                Comment = "Didn't know quartz came in this color. Very cool!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(AquaQuartzHoopsReview);
+
+            ProductReview SunstoneDangleEarringsReview = new ProductReview()
+            {
+                Id = 6,
+                UserId = 5,
+                ProductId = 17,
+                Comment = "These sunstones are so pretty!!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(SunstoneDangleEarringsReview);
+
+            ProductReview BlueLaceGoldHoopsReview = new ProductReview()
+            {
+                Id = 7,
+                UserId = 7,
+                ProductId = 12,
+                Comment = "These blue lace gems are awesome. Love the wire wrapping",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(BlueLaceGoldHoopsReview);
+
+            ProductReview FramedAutumnJasperReview1 = new ProductReview()
+            {
+                Id = 8,
+                UserId = 4,
+                ProductId = 11,
+                Comment = "Interesting earrings!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(FramedAutumnJasperReview1);
+
+            ProductReview FramedAutumnJasperReview2 = new ProductReview()
+            {
+                Id = 9,
+                UserId = 6,
+                ProductId = 11,
+                Comment = "These bead frames are cool!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(FramedAutumnJasperReview2);
+
+            ProductReview PinkOpalHoopsReview = new ProductReview()
+            {
+                Id = 10,
+                UserId = 8,
+                ProductId = 10,
+                Comment = "Oh my god these are so pretty! I want a pair",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(PinkOpalHoopsReview);
+
+            ProductReview AutumnJaspEarrings2Review = new ProductReview()
+            {
+                Id = 11,
+                UserId = 3,
+                ProductId = 18,
+                Comment = "I like how you used the bronze cirle with the gemstones!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(AutumnJaspEarrings2Review);
+
+            ProductReview TreadedEarringReview1 = new ProductReview()
+            {
+                Id = 12,
+                UserId = 3,
+                ProductId = 19,
+                Comment = "Threaded earrings are so pretty. do you have them in any other gemstone?",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(TreadedEarringReview1);
+
+            ProductReview HameredGoldPearlReview1 = new ProductReview()
+            {
+                Id = 13,
+                UserId = 8,
+                ProductId = 20,
+                Comment = "I love how you got the pearls to alternate up and down!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(HameredGoldPearlReview1);
+
+            ProductReview PearlNecklaceReview1 = new ProductReview()
+            {
+                Id = 14,
+                UserId = 5,
+                ProductId = 22,
+                Comment = "These pearls are so pretty!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(PearlNecklaceReview1);
+
+            ProductReview PearlNecklaceReview2 = new ProductReview()
+            {
+                Id = 15,
+                UserId = 7,
+                ProductId = 22,
+                Comment = "Ordered this necklace and i absolutely love it. Would definitely recommend it!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(PearlNecklaceReview2);
+
+            ProductReview BlackOnyxReview = new ProductReview()
+            {
+                Id = 16,
+                UserId = 7,
+                ProductId = 2,
+                Comment = "I love the antique feel of these earrings!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(BlackOnyxReview);
+
+            ProductReview LepidoliteHoopsReview = new ProductReview()
+            {
+                Id = 17,
+                UserId = 8,
+                ProductId = 4,
+                Comment = "Nice wire wrapping!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(LepidoliteHoopsReview);
+
+            ProductReview CoralHoopsReview = new ProductReview()
+            {
+                Id = 18,
+                UserId = 7,
+                ProductId = 2,
+                Comment = "I love the antique feel of these earrings!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(CoralHoopsReview);
+
+            ProductReview BlackTasselReview = new ProductReview()
+            {
+                Id = 19,
+                UserId = 6,
+                ProductId = 7,
+                Comment = "So cute and trendy!",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(BlackTasselReview);
+
+
+            ProductReview LightWoodBraceletReview = new ProductReview()
+            {
+                Id = 20,
+                UserId = 9,
+                ProductId = 25,
+                Comment = "Ordered a few of these and I love them.",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(LightWoodBraceletReview);
+
+
+            ProductReview DarkWoodBraceletReview = new ProductReview()
+            {
+                Id = 21,
+                UserId = 9,
+                ProductId = 26,
+                Comment = "This bracelet is dope",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<ProductReview>().HasData(DarkWoodBraceletReview);
+
+
+
+
+
+
+            Tutorial CrimpTutorial = new Tutorial()
+            {
+                Id = 1,
+                Title = "How to use crimping pliers",
+                VideoPath = "CrimpTutorial.mp4",
+                Description = "First feed one crimp beed onto the wire and then loop it through a clasp or a jump ringand then back through the crimp. PLace the crimp in the OUTER jaw of the crimp tool and make one firm compression. Then place the crimp bead into the crescent-shaped groove of the crimp tool and firmly compress. String the remaining beads onto the wire.",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<Tutorial>().HasData(CrimpTutorial);
+
+
+            Tutorial WireWrappedLoopEarringsTutorial = new Tutorial()
+            {
+                Id = 2,
+                Title = "How to wire wrap loops for earrings",
+                VideoPath = "WireWrappedLoopForEarrings.mp4",
+                Description = "In this video, learn how to make a wrapped wire loop for jewelry making. This basic technique is used when putting a bead on a head pin or eye pin as a dangle or a link, and is more durable than a simple wire loop.",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<Tutorial>().HasData(WireWrappedLoopEarringsTutorial);
+
+            Tutorial Tools101 = new Tutorial()
+            {
+                Id = 3,
+                Title = "Tools for beginners",
+                VideoPath = "Tools101.mp4",
+                Description = "This video shows you how to use all the essential jewelry making tools for beginners.",
+                DateAdded = DateTime.Now
+            };
+            modelBuilder.Entity<Tutorial>().HasData(Tools101);
+
+
         }
     }
 }
